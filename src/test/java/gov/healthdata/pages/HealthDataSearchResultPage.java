@@ -18,8 +18,13 @@ public class HealthDataSearchResultPage extends HealthDataMainPage {
 	}
 	
 	
+	@FindBy (xpath="//div[@class='view-header']") //by Khaliunaa
+	public WebElement searchResultNumber;
 	
+	@FindBy (xpath="(//h2[@class='pane-title ctools-collapsible-handle'])[3]") //by Khaliunaa
+	public WebElement tags;
 	
-	
+	@FindBy (xpath="//a[@id='facetapi-link--80']") //Khaliunaa
+	public WebElement medicaidLink;
 	
 }
