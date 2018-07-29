@@ -1,10 +1,12 @@
 package gov.healthdata.tests;
 
+import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertFalse;
 import static org.testng.Assert.assertTrue;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -13,6 +15,7 @@ import org.testng.annotations.Test;
 
 import gov.healthdata.pages.HealthDataMainPage;
 import gov.healthdata.pages.HealthDataSearchResultPage;
+
 import gov.healthdata.utilities.BrowserUtils;
 import gov.healthdata.utilities.ConfigurationReader;
 import gov.healthdata.utilities.Driver;
@@ -25,6 +28,7 @@ public class HealthDataTests {
 	WebDriver driver;
 	HealthDataMainPage mainPage;
 	HealthDataSearchResultPage secondPage;
+	
 	String data1 = "Health";
 
 	@BeforeMethod
@@ -57,10 +61,38 @@ public class HealthDataTests {
 		BrowserUtils.waitFor(2);
 		assertFalse(secondPage.medicaidLink.isDisplayed(),"Tags options are displayed");
 	}
+	@Test(priority=3, description="T05 by Ahmet")
+	public void  EmptySearch() {
+		mainPage.searchField.sendKeys("");
+		mainPage.searchButton.click();
+		assertEquals(driver.getTitle(), "HealthData.gov");
+	}
+	@Test(priority=3, description="T15 by Ahmet")
+	public void  ThreespaceSearch() {
+		mainPage.searchField.sendKeys("   ");
+		mainPage.searchButton.click();
+		assertTrue(driver.getPageSource().contains("No result were found. Please try another keyword"));
+	}
 	
-	
+	@Test (priority=5, description="T16 by Ahmet")
+	public void Repeated() {
+		mainPage.searchField.sendKeys(data1);
+		mainPage.searchButton.click();
+		String title1=driver.getTitle();
+		System.out.println(title1);
+		
+		secondPage.homepage.click();
+		
+		mainPage.searchField.sendKeys(data1);
+		mainPage.searchButton.click();
+		String title2=driver.getTitle();
+		System.out.println();
+		assertEquals(title1, title2);
+		
+		
+	}
 
-	// @AfterMethod
+	 @AfterMethod
 	public void tearDown() {
 		Driver.closeDriver();
 	}
