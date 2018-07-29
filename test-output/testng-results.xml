@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="4" total="5" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4044" started-at="2018-07-29T21:38:01Z" finished-at="2018-07-29T21:38:05Z">
+  <suite name="Default suite" duration-ms="4684" started-at="2018-07-29T22:19:37Z" finished-at="2018-07-29T22:19:41Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4044" started-at="2018-07-29T21:38:01Z" finished-at="2018-07-29T21:38:05Z">
+    <test name="Default test" duration-ms="4684" started-at="2018-07-29T22:19:37Z" finished-at="2018-07-29T22:19:41Z">
       <class name="gov.healthdata.tests.HealthDataTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:gov.healthdata.tests.HealthDataTests@1794d431]" name="setUp" is-config="true" duration-ms="3041" started-at="2018-07-29T21:38:01Z" finished-at="2018-07-29T21:38:04Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:gov.healthdata.tests.HealthDataTests@1794d431]" name="setUp" is-config="true" duration-ms="3088" started-at="2018-07-29T22:19:37Z" finished-at="2018-07-29T22:19:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="EmptySearch()[pri:3, instance:gov.healthdata.tests.HealthDataTests@1794d431]" name="EmptySearch" duration-ms="882" started-at="2018-07-29T21:38:04Z" description="T05 by Ahmet" finished-at="2018-07-29T21:38:05Z">
+        <test-method status="PASS" signature="ThreespaceSearch()[pri:3, instance:gov.healthdata.tests.HealthDataTests@1794d431]" name="ThreespaceSearch" duration-ms="1427" started-at="2018-07-29T22:19:40Z" description="T15 by Ahmet" finished-at="2018-07-29T22:19:41Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- EmptySearch -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:gov.healthdata.tests.HealthDataTests@1794d431]" name="tearDown" is-config="true" duration-ms="100" started-at="2018-07-29T21:38:05Z" finished-at="2018-07-29T21:38:05Z">
+        </test-method> <!-- ThreespaceSearch -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:gov.healthdata.tests.HealthDataTests@1794d431]" name="tearDown" is-config="true" duration-ms="145" started-at="2018-07-29T22:19:41Z" finished-at="2018-07-29T22:19:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

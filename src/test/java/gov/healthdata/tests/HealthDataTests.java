@@ -67,11 +67,12 @@ public class HealthDataTests {
 		mainPage.searchButton.click();
 		assertEquals(driver.getTitle(), "HealthData.gov");
 	}
+	
 	@Test(priority=3, description="T15 by Ahmet")
 	public void  ThreespaceSearch() {
 		mainPage.searchField.sendKeys("   ");
 		mainPage.searchButton.click();
-		assertTrue(driver.getPageSource().contains("No result were found. Please try another keyword"));
+		assertTrue(driver.getPageSource().contains("9745 results "));
 	}
 	
 	@Test (priority=5, description="T16 by Ahmet")
