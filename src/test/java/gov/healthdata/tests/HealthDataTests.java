@@ -7,7 +7,9 @@ import static org.testng.Assert.assertTrue;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Keyboard;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Ignore;
@@ -28,7 +30,7 @@ public class HealthDataTests {
 	WebDriver driver;
 	HealthDataMainPage mainPage;
 	HealthDataSearchResultPage secondPage;
-	
+
 	String data1 = "Health";
 
 	@BeforeMethod
@@ -48,54 +50,92 @@ public class HealthDataTests {
 		int count = Integer.parseInt(secondPage.searchResultNumber.getText().split(" ")[0]);
 		assertTrue(count > 1, "Search result is not more than 1");
 	}
-	
+
 	@Test(priority = 2, description = "T013 by Khaliunaa")
 	public void tagOptions() {
 		mainPage.searchField.sendKeys(data1);
 		mainPage.searchButton.click();
-		
-		assertFalse(secondPage.medicaidLink.isDisplayed(),"Tags options are displayed");
+
+		assertFalse(secondPage.medicaidLink.isDisplayed(), "Tags options are displayed");
 		secondPage.tags.click();
 		assertTrue(secondPage.medicaidLink.isDisplayed(), "Tags options are not displayed");
 		secondPage.tags.click();
 		BrowserUtils.waitFor(2);
-		assertFalse(secondPage.medicaidLink.isDisplayed(),"Tags options are displayed");
+		assertFalse(secondPage.medicaidLink.isDisplayed(), "Tags options are displayed");
 	}
-	@Test(priority=3, description="T05 by Ahmet")
-	public void  EmptySearch() {
+
+	@Test(priority = 3, description = "T05 by Ahmet")
+	public void EmptySearch() {
 		mainPage.searchField.sendKeys("");
 		mainPage.searchButton.click();
 		assertEquals(driver.getTitle(), "HealthData.gov");
 	}
-	
-	@Test(priority=3, description="T15 by Ahmet")
-	public void  ThreespaceSearch() {
+
+	@Test(priority = 4, description = "T15 by Ahmet")
+	public void ThreespaceSearch() {
 		mainPage.searchField.sendKeys("   ");
 		mainPage.searchButton.click();
 		assertTrue(driver.getPageSource().contains("9745 results "));
 	}
-	
-	@Test (priority=5, description="T16 by Ahmet")
+
+	@Test(priority = 5, description = "T16 by Ahmet")
 	public void Repeated() {
 		mainPage.searchField.sendKeys(data1);
 		mainPage.searchButton.click();
-		String title1=driver.getTitle();
+		String title1 = driver.getTitle();
 		System.out.println(title1);
-		
+
 		secondPage.homepage.click();
-		
+
 		mainPage.searchField.sendKeys(data1);
 		mainPage.searchButton.click();
-		String title2=driver.getTitle();
+		String title2 = driver.getTitle();
 		System.out.println();
 		assertEquals(title1, title2);
-		
-		
+
 	}
 
-	 @AfterMethod
+	@Test(priority = 6, description = "TC001 by KimyaNur")
+	public void Title() {
+		String expectedUrl = "HealthData.gov";
+		assertTrue(driver.getCurrentUrl().toLowerCase().contains(expectedUrl.toLowerCase()));
+		String expectedtitle = "HealthData.gov";
+		assertEquals(expectedtitle, driver.getTitle());
+	}
+
+	@Test(priority = 7, description = "TC011 by KimyaNur")
+	public void Verify_the_result_match_filter_keyword_topic_result() {
+		String expectedUrl = "www.healthdata.gov";
+		assertTrue(driver.getCurrentUrl().contains(expectedUrl));
+		mainPage.searchField.sendKeys("health");
+		mainPage.searchButton.click();
+
+		String beforeresultFiltre = findNumber(secondPage.beforeresultFiltreHealthOfHealth.getText());
+		secondPage.healthClick.click();
+		String resultFiltre = findNumber(secondPage.resultFiltreHealthOfHealth.getText());
+		assertTrue(beforeresultFiltre.contains(resultFiltre));
+
+		String beforeResultofhospital = findNumber(secondPage.hospitalClick.getText());
+		secondPage.hospitalClick.click();
+		String Resultofhospital = findNumber(secondPage.resultfiltrehospital.getText());
+		assertTrue(beforeResultofhospital.contains(Resultofhospital));
+
+		assertTrue(Integer.parseInt(beforeresultFiltre) > Integer.parseInt(Resultofhospital));
+
+	}
+
+	@AfterMethod
 	public void tearDown() {
 		Driver.closeDriver();
+	}
+
+	public static String findNumber(String s) {   // by KimyaNur
+		String num = "";
+		for (int i = 0; i < s.length(); i++) {
+			if (Character.valueOf(s.charAt(i)).isDigit(s.charAt(i)))
+				num += s.charAt(i);
+		}
+		return num;
 	}
 
 }

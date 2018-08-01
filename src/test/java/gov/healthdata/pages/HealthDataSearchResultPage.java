@@ -29,4 +29,31 @@ public class HealthDataSearchResultPage extends HealthDataMainPage {
 	@FindBy(xpath="//a[@id='anch_20']")
 	public WebElement homepage;
 	
+	
+	
+	
+	@FindBy(id="edit-query")
+	public WebElement searchResultHealth;  // by KimyaNur
+	
+	@FindBy(xpath="//*[@id=\"facetapi-link\"]")
+	public WebElement beforeresultFiltreHealthOfHealth;    // by KimyaNur
+	
+	@FindBy(id="facetapi-link")
+	public WebElement healthClick;  // by KimyaNur
+	
+	@FindBy(xpath="//div[@class='view-header']")
+	public WebElement resultFiltreHealthOfHealth;  // by KimyaNur
+	
+	@FindBy(xpath="//a[@id='facetapi-link--6']")
+	public WebElement hospitalClick;  // by KimyaNur
+	
+	@FindBy(xpath="//div[@class='view-header']")
+	public WebElement resultfiltrehospital;  // by KimyaNur
+	
+	
+	
+	
+	
+	
+	
 }

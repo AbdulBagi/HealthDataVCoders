@@ -5,7 +5,7 @@
     <classes>
       <class name="gov.healthdata.tests.HealthDataTests">
         <methods>
-          <include name="ThreespaceSearch"/>
+          <include name="Verify_the_result_match_filter_keyword_topic_result"/>
           <include name="setUp"/>
           <include name="tearDown"/>
         </methods>
