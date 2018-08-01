@@ -132,7 +132,7 @@ public class HealthDataTests {
 	public static String findNumber(String s) {   // by KimyaNur
 		String num = "";
 		for (int i = 0; i < s.length(); i++) {
-			if (Character.valueOf(s.charAt(i)).isDigit(s.charAt(i)))
+			if (Character.isDigit(s.charAt(i)))
 				num += s.charAt(i);
 		}
 		return num;
