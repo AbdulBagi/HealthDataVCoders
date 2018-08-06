@@ -75,7 +75,7 @@ public class HealthDataTests {
 	public void ThreespaceSearch() {
 		mainPage.searchField.sendKeys("   ");
 		mainPage.searchButton.click();
-		assertTrue(driver.getPageSource().contains("9745 results "));
+		assertTrue(driver.getPageSource().contains("results "));
 	}
 
 	@Test(priority = 5, description = "T16 by Ahmet")
