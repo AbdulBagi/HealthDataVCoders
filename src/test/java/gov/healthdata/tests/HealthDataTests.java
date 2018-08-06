@@ -124,12 +124,30 @@ public class HealthDataTests {
 
 	}
 
+	@Test(priority = 8, description = "TC002 by Merve")
+	public void SearchButton() {
+		assertTrue(mainPage.searchField.isDisplayed());
+	}
+
+	@Test(priority = 9, description = "TC012 by Merve")
+	public void SearchItem() {
+		mainPage.searchField.sendKeys("child care", Keys.ENTER);
+
+		System.out.println(findNumber(secondPage.dataSet.getText()));
+		int data = Integer.parseInt(findNumber(secondPage.dataSet.getText()));
+		int resrc = Integer.parseInt(findNumber(secondPage.resource.getText()));
+		int blg = Integer.parseInt(findNumber(secondPage.blog.getText()));
+		int reslt = Integer.parseInt(findNumber(secondPage.result.getText()));
+		assertEquals(reslt, (data + resrc + blg));
+
+	}
+
 	@AfterMethod
 	public void tearDown() {
 		Driver.closeDriver();
 	}
 
-	public static String findNumber(String s) {   // by KimyaNur
+	public static String findNumber(String s) { // by KimyaNur
 		String num = "";
 		for (int i = 0; i < s.length(); i++) {
 			if (Character.isDigit(s.charAt(i)))
