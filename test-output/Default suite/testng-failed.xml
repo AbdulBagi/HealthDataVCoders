@@ -5,7 +5,10 @@
     <classes>
       <class name="gov.healthdata.tests.HealthDataTests">
         <methods>
+<<<<<<< HEAD
           <include name="ThreespaceSearch"/>
+=======
+>>>>>>> f9a71f7384cef2c6f65655f5e7b99a461189cf6f
           <include name="setUp"/>
           <include name="tearDown"/>
           <include name="tagOptions"/>
