@@ -24,7 +24,7 @@ public class HealthDataSearchResultPage extends HealthDataMainPage {
 	@FindBy (xpath="(//h2[@class='pane-title ctools-collapsible-handle'])[3]") //by Khaliunaa
 	public WebElement tags;
 	
-	@FindBy (xpath="//a[@id='facetapi-link--80']") //Khaliunaa
+	@FindBy (xpath="//a[contains(text(),'medicaid')]") //Khaliunaa
 	public WebElement medicaidLink;
 	@FindBy(xpath="//a[@id='anch_20']")
 	public WebElement homepage;

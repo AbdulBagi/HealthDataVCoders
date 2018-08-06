@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="6" total="7" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="8691" started-at="2018-08-01T18:28:13Z" finished-at="2018-08-01T18:28:21Z">
+  <suite name="Default suite" duration-ms="6449" started-at="2018-08-06T18:42:16Z" finished-at="2018-08-06T18:42:23Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="8691" started-at="2018-08-01T18:28:13Z" finished-at="2018-08-01T18:28:21Z">
+    <test name="Default test" duration-ms="6449" started-at="2018-08-06T18:42:16Z" finished-at="2018-08-06T18:42:23Z">
       <class name="gov.healthdata.tests.HealthDataTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:gov.healthdata.tests.HealthDataTests@6a41eaa2]" name="setUp" is-config="true" duration-ms="5850" started-at="2018-08-01T18:28:13Z" finished-at="2018-08-01T18:28:18Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:gov.healthdata.tests.HealthDataTests@1794d431]" name="setUp" is-config="true" duration-ms="2798" started-at="2018-08-06T18:42:16Z" finished-at="2018-08-06T18:42:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="Verify_the_result_match_filter_keyword_topic_result()[pri:7, instance:gov.healthdata.tests.HealthDataTests@6a41eaa2]" name="Verify_the_result_match_filter_keyword_topic_result" duration-ms="2077" started-at="2018-08-01T18:28:18Z" description="TC011 by KimyaNur" finished-at="2018-08-01T18:28:20Z">
+        <test-method status="PASS" signature="tagOptions()[pri:2, instance:gov.healthdata.tests.HealthDataTests@1794d431]" name="tagOptions" duration-ms="3536" started-at="2018-08-06T18:42:19Z" description="T013 by Khaliunaa" finished-at="2018-08-06T18:42:22Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Verify_the_result_match_filter_keyword_topic_result -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:gov.healthdata.tests.HealthDataTests@6a41eaa2]" name="tearDown" is-config="true" duration-ms="749" started-at="2018-08-01T18:28:20Z" finished-at="2018-08-01T18:28:21Z">
+        </test-method> <!-- tagOptions -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:gov.healthdata.tests.HealthDataTests@1794d431]" name="tearDown" is-config="true" duration-ms="92" started-at="2018-08-06T18:42:22Z" finished-at="2018-08-06T18:42:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
