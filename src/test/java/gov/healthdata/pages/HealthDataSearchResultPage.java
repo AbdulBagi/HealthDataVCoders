@@ -64,6 +64,10 @@ public class HealthDataSearchResultPage extends HealthDataMainPage {
 	@FindBy(xpath="//div[@class='view-header']")
 	public WebElement result;  // by Merve
 	
+	@FindBy(xpath="//ul[@class='breadcrumb']/li[3]")
+	public WebElement searchedText;  // by Marta
+	
+	
 	
 	
 	

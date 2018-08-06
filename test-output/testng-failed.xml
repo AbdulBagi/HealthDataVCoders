@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [SmokeTest]">
+  <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="SmokeTest"/>
+      </run>
+    </groups>
     <classes>
       <class name="gov.healthdata.tests.HealthDataTests">
         <methods>
-<<<<<<< HEAD
+          <include name="positiveSearch"/>
           <include name="ThreespaceSearch"/>
-=======
->>>>>>> f9a71f7384cef2c6f65655f5e7b99a461189cf6f
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="tagOptions"/>
+          <include name="SearchButton"/>
+          <include name="Title"/>
         </methods>
       </class> <!-- gov.healthdata.tests.HealthDataTests -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [SmokeTest] -->

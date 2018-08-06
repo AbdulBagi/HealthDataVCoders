@@ -32,6 +32,8 @@ public class HealthDataTests {
 	HealthDataSearchResultPage secondPage;
 
 	String data1 = "Health";
+	String data2="Sausage";
+	String data3="halth";
 
 	@BeforeMethod
 	public void setUp() {
@@ -138,12 +140,12 @@ public class HealthDataTests {
 
 	
 
-	@Test(priority = 8, description = "TC002 by Merve")
+	@Test(priority = 9, description = "TC002 by Merve")
 	public void SearchButton() {
 		assertTrue(mainPage.searchField.isDisplayed());
 	}
 
-	@Test(priority = 9, description = "TC012 by Merve")
+	@Test(priority = 10, description = "TC012 by Merve")
 	public void SearchItem() {
 		mainPage.searchField.sendKeys("child care", Keys.ENTER);
 
@@ -154,6 +156,27 @@ public class HealthDataTests {
 		int reslt = Integer.parseInt(findNumber(secondPage.result.getText()));
 		assertEquals(reslt, (data + resrc + blg));
 
+	}
+	
+	@Test(priority = 11, description = "TC004 by Marta")
+	public void notRelatedSearchResult() {
+		mainPage.searchField.sendKeys(data2);
+		mainPage.searchButton.click();
+		
+		assertTrue(driver.getPageSource().contains("No results were found. Please try another keyword."));
+	}
+	@Test(priority = 12, description = "TC019 by Marta")
+	public void typoCorrection() {
+		mainPage.searchField.sendKeys(data3);
+		mainPage.searchButton.click();
+	
+		assertTrue(secondPage.searchedText.getText().contains(data3));
+	}
+	@Test(priority = 13, description = "TC020 by Marta")
+	public void incorrectGrammer() {
+		mainPage.searchField.sendKeys(data3);
+		mainPage.searchButton.click();
+		assertTrue(driver.getPageSource().contains("No results were found. Please try another keyword."));
 	}
 
 	@AfterMethod
