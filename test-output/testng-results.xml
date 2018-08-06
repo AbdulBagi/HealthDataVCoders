@@ -1,21 +1,182 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="6" total="7" passed="1">
+<testng-results skipped="0" failed="2" ignored="0" total="8" passed="6">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="8691" started-at="2018-08-01T18:28:13Z" finished-at="2018-08-01T18:28:21Z">
+  <suite name="Default suite" duration-ms="66461" started-at="2018-08-06T21:25:15Z" finished-at="2018-08-06T21:26:22Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="8691" started-at="2018-08-01T18:28:13Z" finished-at="2018-08-01T18:28:21Z">
+    <test name="Default test" duration-ms="66461" started-at="2018-08-06T21:25:15Z" finished-at="2018-08-06T21:26:22Z">
       <class name="gov.healthdata.tests.HealthDataTests">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:gov.healthdata.tests.HealthDataTests@6a41eaa2]" name="setUp" is-config="true" duration-ms="5850" started-at="2018-08-01T18:28:13Z" finished-at="2018-08-01T18:28:18Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:gov.healthdata.tests.HealthDataTests@6a4f787b]" name="setUp" is-config="true" duration-ms="6801" started-at="2018-08-06T21:25:15Z" finished-at="2018-08-06T21:25:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="Verify_the_result_match_filter_keyword_topic_result()[pri:7, instance:gov.healthdata.tests.HealthDataTests@6a41eaa2]" name="Verify_the_result_match_filter_keyword_topic_result" duration-ms="2077" started-at="2018-08-01T18:28:18Z" description="TC011 by KimyaNur" finished-at="2018-08-01T18:28:20Z">
+        <test-method status="PASS" signature="positiveSearch()[pri:1, instance:gov.healthdata.tests.HealthDataTests@6a4f787b]" name="positiveSearch" duration-ms="1072" started-at="2018-08-06T21:25:22Z" description="T003 by Khaliunaa" finished-at="2018-08-06T21:25:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- positiveSearch -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:gov.healthdata.tests.HealthDataTests@6a4f787b]" name="tearDown" is-config="true" duration-ms="695" started-at="2018-08-06T21:25:23Z" finished-at="2018-08-06T21:25:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:gov.healthdata.tests.HealthDataTests@6a4f787b]" name="setUp" is-config="true" duration-ms="5662" started-at="2018-08-06T21:25:24Z" finished-at="2018-08-06T21:25:30Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="tagOptions()[pri:2, instance:gov.healthdata.tests.HealthDataTests@6a4f787b]" name="tagOptions" duration-ms="1285" started-at="2018-08-06T21:25:30Z" description="T013 by Khaliunaa" finished-at="2018-08-06T21:25:31Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[Tags options are not displayed expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: Tags options are not displayed expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at gov.healthdata.tests.HealthDataTests.tagOptions(HealthDataTests.java:61)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tagOptions -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:gov.healthdata.tests.HealthDataTests@6a4f787b]" name="tearDown" is-config="true" duration-ms="840" started-at="2018-08-06T21:25:31Z" finished-at="2018-08-06T21:25:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:gov.healthdata.tests.HealthDataTests@6a4f787b]" name="setUp" is-config="true" duration-ms="5526" started-at="2018-08-06T21:25:32Z" finished-at="2018-08-06T21:25:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="EmptySearch()[pri:3, instance:gov.healthdata.tests.HealthDataTests@6a4f787b]" name="EmptySearch" duration-ms="926" started-at="2018-08-06T21:25:37Z" description="T05 by Ahmet" finished-at="2018-08-06T21:25:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- EmptySearch -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:gov.healthdata.tests.HealthDataTests@6a4f787b]" name="tearDown" is-config="true" duration-ms="714" started-at="2018-08-06T21:25:38Z" finished-at="2018-08-06T21:25:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:gov.healthdata.tests.HealthDataTests@6a4f787b]" name="setUp" is-config="true" duration-ms="5615" started-at="2018-08-06T21:25:39Z" finished-at="2018-08-06T21:25:45Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="FAIL" signature="ThreespaceSearch()[pri:4, instance:gov.healthdata.tests.HealthDataTests@6a4f787b]" name="ThreespaceSearch" duration-ms="1949" started-at="2018-08-06T21:25:45Z" description="T15 by Ahmet" finished-at="2018-08-06T21:25:47Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at org.testng.Assert.assertTrue(Assert.java:54)
+at gov.healthdata.tests.HealthDataTests.ThreespaceSearch(HealthDataTests.java:78)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+at java.lang.reflect.Method.invoke(Unknown Source)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
+at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
+at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+at org.testng.TestRunner.privateRun(TestRunner.java:648)
+at org.testng.TestRunner.run(TestRunner.java:505)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+at org.testng.TestNG.runSuites(TestNG.java:1049)
+at org.testng.TestNG.run(TestNG.java:1017)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ThreespaceSearch -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:gov.healthdata.tests.HealthDataTests@6a4f787b]" name="tearDown" is-config="true" duration-ms="793" started-at="2018-08-06T21:25:47Z" finished-at="2018-08-06T21:25:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:gov.healthdata.tests.HealthDataTests@6a4f787b]" name="setUp" is-config="true" duration-ms="5072" started-at="2018-08-06T21:25:47Z" finished-at="2018-08-06T21:25:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="Repeated()[pri:5, instance:gov.healthdata.tests.HealthDataTests@6a4f787b]" name="Repeated" duration-ms="2456" started-at="2018-08-06T21:25:52Z" description="T16 by Ahmet" finished-at="2018-08-06T21:25:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Repeated -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:gov.healthdata.tests.HealthDataTests@6a4f787b]" name="tearDown" is-config="true" duration-ms="656" started-at="2018-08-06T21:25:55Z" finished-at="2018-08-06T21:25:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:gov.healthdata.tests.HealthDataTests@6a4f787b]" name="setUp" is-config="true" duration-ms="5019" started-at="2018-08-06T21:25:56Z" finished-at="2018-08-06T21:26:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="Title()[pri:6, instance:gov.healthdata.tests.HealthDataTests@6a4f787b]" name="Title" duration-ms="11" started-at="2018-08-06T21:26:01Z" description="TC001 by KimyaNur" finished-at="2018-08-06T21:26:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Title -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:gov.healthdata.tests.HealthDataTests@6a4f787b]" name="tearDown" is-config="true" duration-ms="654" started-at="2018-08-06T21:26:01Z" finished-at="2018-08-06T21:26:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:gov.healthdata.tests.HealthDataTests@6a4f787b]" name="setUp" is-config="true" duration-ms="5614" started-at="2018-08-06T21:26:01Z" finished-at="2018-08-06T21:26:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="Verify_the_result_match_filter_keyword_topic_result()[pri:7, instance:gov.healthdata.tests.HealthDataTests@6a4f787b]" name="Verify_the_result_match_filter_keyword_topic_result" duration-ms="1964" started-at="2018-08-06T21:26:07Z" description="TC011 by KimyaNur" finished-at="2018-08-06T21:26:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Verify_the_result_match_filter_keyword_topic_result -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:gov.healthdata.tests.HealthDataTests@6a41eaa2]" name="tearDown" is-config="true" duration-ms="749" started-at="2018-08-01T18:28:20Z" finished-at="2018-08-01T18:28:21Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:gov.healthdata.tests.HealthDataTests@6a4f787b]" name="tearDown" is-config="true" duration-ms="744" started-at="2018-08-06T21:26:09Z" finished-at="2018-08-06T21:26:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="setUp()[pri:0, instance:gov.healthdata.tests.HealthDataTests@6a4f787b]" name="setUp" is-config="true" duration-ms="5670" started-at="2018-08-06T21:26:10Z" finished-at="2018-08-06T21:26:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="Verifying_the_maximum_capacity_of_the_characters_in_the_search_box()[pri:8, instance:gov.healthdata.tests.HealthDataTests@6a4f787b]" name="Verifying_the_maximum_capacity_of_the_characters_in_the_search_box" duration-ms="6031" started-at="2018-08-06T21:26:15Z" description="TC06 by Kubanychbek" finished-at="2018-08-06T21:26:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Verifying_the_maximum_capacity_of_the_characters_in_the_search_box -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:gov.healthdata.tests.HealthDataTests@6a4f787b]" name="tearDown" is-config="true" duration-ms="669" started-at="2018-08-06T21:26:21Z" finished-at="2018-08-06T21:26:22Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

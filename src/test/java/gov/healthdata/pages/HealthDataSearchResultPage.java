@@ -29,7 +29,8 @@ public class HealthDataSearchResultPage extends HealthDataMainPage {
 	@FindBy(xpath="//a[@id='anch_20']")
 	public WebElement homepage;
 	
-	
+	@FindBy(xpath = "//ul[@class='breadcrumb']")
+	public WebElement characterCount;
 	
 	
 	@FindBy(id="edit-query")

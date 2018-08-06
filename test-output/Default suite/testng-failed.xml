@@ -5,9 +5,10 @@
     <classes>
       <class name="gov.healthdata.tests.HealthDataTests">
         <methods>
-          <include name="Verify_the_result_match_filter_keyword_topic_result"/>
+          <include name="ThreespaceSearch"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="tagOptions"/>
         </methods>
       </class> <!-- gov.healthdata.tests.HealthDataTests -->
     </classes>

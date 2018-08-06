@@ -37,7 +37,7 @@ public class HealthDataTests {
 	public void setUp() {
 		driver = Driver.getDriver();
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.manage().window().fullscreen();
+		driver.manage().window().maximize();
 		driver.get(ConfigurationReader.getProperty("url"));
 		mainPage = new HealthDataMainPage();
 		secondPage = new HealthDataSearchResultPage();
@@ -123,6 +123,20 @@ public class HealthDataTests {
 		assertTrue(Integer.parseInt(beforeresultFiltre) > Integer.parseInt(Resultofhospital));
 
 	}
+	
+	@Test(priority = 8, description = "TC06 by Kubanychbek")
+	public void Verifying_the_maximum_capacity_of_the_characters_in_the_search_box() {
+		int count=0;
+		for(int i=1; i<128; i++) {	
+			mainPage.searchField.sendKeys("p");
+			count++;	
+		}	
+		mainPage.searchButton.click();
+		int expectedCount=(secondPage.characterCount.getText().length())-10;
+		assertTrue(count==expectedCount);	
+	}
+
+	
 
 	@AfterMethod
 	public void tearDown() {
