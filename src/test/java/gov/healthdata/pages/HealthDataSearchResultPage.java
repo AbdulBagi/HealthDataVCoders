@@ -51,6 +51,18 @@ public class HealthDataSearchResultPage extends HealthDataMainPage {
 	public WebElement resultfiltrehospital;  // by KimyaNur
 	
 	
+	@FindBy(id="facetapi-link--90")
+	public WebElement dataSet; // by Merve
+	
+	@FindBy(id="facetapi-link--91")
+	public WebElement resource; // by Merve
+	
+	@FindBy(id="facetapi-link--92")
+	public WebElement blog; // by Merve
+	
+	@FindBy(xpath="//div[@class='view-header']")
+	public WebElement result;  // by Merve
+	
 	
 	
 	
