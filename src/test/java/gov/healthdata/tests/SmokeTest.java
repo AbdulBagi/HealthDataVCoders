@@ -20,6 +20,11 @@ import gov.healthdata.pages.HealthDataSearchResultPage;
 import gov.healthdata.utilities.BrowserUtils;
 import gov.healthdata.utilities.ConfigurationReader;
 import gov.healthdata.utilities.Driver;
+
+/*
+ * This class has 4 Smoke Tests
+ */
+
 public class SmokeTest {
 	WebDriver driver;
 	HealthDataMainPage mainPage;
